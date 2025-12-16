@@ -1,0 +1,2470 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["subPackage-ShoppingCart-cartOrderBalance~subPackage-activity-flowIndex~subPackage-activity-packageIn~95a86d06"], {
+    "4ae5": function(e, o, t) {
+        "use strict";
+        var i = t("4ea4");
+        Object.defineProperty(o, "__esModule", {
+            value: !0
+        }),
+        o.receiveCoupon = o.queryCardSortShow = o.eSimAppoint = o.couponCollection = o.queryMergeLinkProductList = o.nationalSubsidyUnBind = o.getSubsidyQualificationCode = o.getNearStoreRooms = o.getHallStoreListItem = o.getHallStoreList = o.getHallStoreShopData = o.getHallStoreCardData = o.getShopTypeByPageId = o.queryBrandList = o.getAgentIdByPhone = o.queryNavagationIOP = o.registerOrInvite = o.getSecondPosterImg = o.getEWMImg = o.customerCheck = o.getShoperRefer = o.cancelRefer = o.addRefer = o.getResultInfo = o.getDetailByMergeCode = o.getPageData = o.getShopPageData = o.getPageidByProvinceCode = o.getShopPageIdByProvince = o.getPageListData = o.getCategoryData = o.shopSearchData = o.updataShopInfo = o.productNameByWord = o.getMerchantConfig = void 0,
+        t("96cf");
+        var c = i(t("1da1"))
+          , r = i(t("b775"))
+          , n = i(t("b893"))
+          , a = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                data: e,
+                url: "/nrapigate/nrshop/atom/merchant/config"
+            })
+        };
+        o.getMerchantConfig = a;
+        var d = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrshop/atom/shop/productNameByWord"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.productNameByWord = d;
+        var y = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                var t;
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.next = 2,
+                            (0,
+                            r.default)({
+                                method: "POST",
+                                isToast: !1,
+                                url: "/nrapigate/nrmix/shop/page/updateShopName",
+                                data: o
+                            });
+                        case 2:
+                            return t = e.sent,
+                            e.abrupt("return", t);
+                        case 4:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.updataShopInfo = y;
+        var C = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrshop/atom/shop/searchProductFromShop"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.shopSearchData = C;
+        var p = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                data: e,
+                url: "/nrapigate/nrshop/atom/shop/productTypeList"
+            })
+        };
+        o.getCategoryData = p;
+        var v = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                data: e,
+                url: "/nrapigate/nrshop/atom/shop/productListByType"
+            })
+        };
+        o.getPageListData = v;
+        var u = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                url: "/nrapigate/nrshop/atom/shop/queryPageId",
+                data: e
+            })
+        };
+        o.getShopPageIdByProvince = u;
+        var m = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                loading: !1,
+                data: e,
+                url: "/nrapigate/nrshop/atom/shop/queryPageId"
+            })
+        };
+        o.getPageidByProvinceCode = m;
+        var N = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                isToast: !1,
+                data: n.default.getUrlParams(e.pageDataUrl),
+                url: e.pageDataUrl
+            })
+        };
+        o.getShopPageData = N;
+        var s = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                loading: !1,
+                data: e,
+                url: "/nrapigate/nrmix/shop/page/shopPage"
+            })
+        };
+        o.getPageData = s;
+        var f = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/shop/integration/queryProductPageNew"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getDetailByMergeCode = f;
+        var l = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrshop/atom/shop/queryResultPage"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getResultInfo = l;
+        var g = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/shop/refer/addRefer"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.addRefer = g;
+        var h = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrshop/atom/refer/cancelRefer"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.cancelRefer = h;
+        var I = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                loading: !1,
+                                data: o,
+                                url: "/nrapigate/nrmix/shop/refer/referInfo"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getShoperRefer = I;
+        var P = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                silent: !0,
+                                loading: !1,
+                                data: o,
+                                url: "/nrapigate/nrshop/atom/shop/customerCheck"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.customerCheck = P;
+        var S = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: o.requestUrl && "getEWMImg" == o.requestUrl && o.from && "shop" == o.from || o.requestUrl && "getEWMImgQR" == o.requestUrl ? "/nrapigate/nrmix/shop/poster/".concat(o.urlAddress) : "/nrapigate/nrshop/atom/poster/posterImg"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getEWMImg = S;
+        var w = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/shop/poster/shopPosterInfo"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getSecondPosterImg = w;
+        var x = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/shop/saleman/registerOrInvite"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.registerOrInvite = x;
+        var R = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                loading: !1,
+                                silent: !0,
+                                data: o,
+                                url: "/nrapigate/nrmix/contactPoint/queryIopHomeShop"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.queryNavagationIOP = R;
+        var b = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                url: "/nrapigate/nrshop/atom/shop/queryAgentId",
+                data: e
+            })
+        };
+        o.getAgentIdByPhone = b;
+        var T = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                url: "/nrapigate/nrshop/atom/shop/queryBrandList",
+                data: e
+            })
+        };
+        o.queryBrandList = T;
+        var O = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/shop/shopType"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getShopTypeByPageId = O;
+        var k = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrhall/netStore/queryNearStore"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getHallStoreCardData = k;
+        var B = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/shop/queryLocalPage"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getHallStoreShopData = B;
+        var q = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrhall/netStore/queryNearStoreList"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getHallStoreList = q;
+        var D = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrhall/netStore/storeDetail"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getHallStoreListItem = D;
+        var L = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrhall/netStore/queryNearStoreRooms"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getNearStoreRooms = L;
+        var M = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/nationalSubsidy/qualificationCode/queryStatus"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.getSubsidyQualificationCode = M;
+        var H = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/nationalSubsidy/qualificationCode/unBinding"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.nationalSubsidyUnBind = H;
+        var U = function() {
+            var e = (0,
+            c.default)(regeneratorRuntime.mark((function e(o) {
+                return regeneratorRuntime.wrap((function(e) {
+                    while (1)
+                        switch (e.prev = e.next) {
+                        case 0:
+                            return e.abrupt("return", (0,
+                            r.default)({
+                                method: "POST",
+                                data: o,
+                                url: "/nrapigate/nrmix/productMerge/queryMergeLinkProductList"
+                            }));
+                        case 1:
+                        case "end":
+                            return e.stop()
+                        }
+                }
+                ), e)
+            }
+            )));
+            return function(o) {
+                return e.apply(this, arguments)
+            }
+        }();
+        o.queryMergeLinkProductList = U;
+        var A = function(e) {
+            return (0,
+            r.default)({
+                method: "POST",
+                data: e,
+                url: "/nrapigate/nrmix/nationalSubsidy/qualificationCode/couponCollection"
+            })
+        };
+        o.couponCollection = A;
+        var W = function() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            return (0,
+            r.default)({
+                method: "POST",
+                data: e,
+                url: "/nrapigate/nrmix/opportunity/eSimAppoint"
+            })
+        };
+        o.eSimAppoint = W;
+        var E = function() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            return (0,
+            r.default)({
+                method: "POST",
+                data: e,
+                url: "/nrapigate/nrhall/nearbyHall/queryCardSortShow"
+            })
+        };
+        o.queryCardSortShow = E;
+        var _ = function() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            return (0,
+            r.default)({
+                method: "POST",
+                data: e,
+                url: "/nrapigate/nrhall/nearbyHall/receiveCoupon"
+            })
+        };
+        o.receiveCoupon = _
+    },
+    "8ab9": function(e, o, t) {
+        "use strict";
+        (function(e) {
+            var i = t("dbce")
+              , c = t("4ea4");
+            Object.defineProperty(o, "__esModule", {
+                value: !0
+            }),
+            o.findCityArrByCode = o.findCityCodeByCityName = o.getProvinceCode = o.getProvinceByCode = o.getCityNameByCode = o.provinceMap = o.cityList = o.getProvince = o.findCityByProvince = o.getcustomerCheckData = o.getShopPageIdByProvince = o.getPhoneSource = void 0,
+            t("96cf");
+            var r = c(t("1da1"));
+            t("7db0"),
+            t("c975"),
+            t("d3b7");
+            var n = c(t("4360"))
+              , a = i(t("4ae5"))
+              , d = [{
+                provinceIndex: 1,
+                provinceId: "000",
+                province: "全网"
+            }, {
+                provinceIndex: 2,
+                provinceId: "371",
+                province: "河南"
+            }, {
+                provinceIndex: 4,
+                provinceId: "100",
+                province: "北京"
+            }, {
+                provinceIndex: 5,
+                provinceId: "431",
+                province: "吉林"
+            }, {
+                provinceIndex: 6,
+                provinceId: "991",
+                province: "新疆"
+            }, {
+                provinceIndex: 7,
+                provinceId: "280",
+                province: "四川"
+            }, {
+                provinceIndex: 8,
+                provinceId: "591",
+                province: "福建"
+            }, {
+                provinceIndex: 9,
+                provinceId: "451",
+                province: "黑龙江"
+            }, {
+                provinceIndex: 10,
+                provinceId: "240",
+                province: "辽宁"
+            }, {
+                provinceIndex: 11,
+                provinceId: "931",
+                province: "甘肃"
+            }, {
+                provinceIndex: 12,
+                provinceId: "311",
+                province: "河北"
+            }, {
+                provinceIndex: 13,
+                provinceId: "270",
+                province: "湖北"
+            }, {
+                provinceIndex: 14,
+                provinceId: "731",
+                province: "湖南"
+            }, {
+                provinceIndex: 15,
+                provinceId: "531",
+                province: "山东"
+            }, {
+                provinceIndex: 17,
+                provinceId: "250",
+                province: "江苏"
+            }, {
+                provinceIndex: 18,
+                provinceId: "210",
+                province: "上海"
+            }, {
+                provinceIndex: 19,
+                provinceId: "571",
+                province: "浙江"
+            }, {
+                provinceIndex: 20,
+                provinceId: "551",
+                province: "安徽"
+            }, {
+                provinceIndex: 21,
+                provinceId: "791",
+                province: "江西"
+            }, {
+                provinceIndex: 22,
+                provinceId: "200",
+                province: "广东"
+            }, {
+                provinceIndex: 23,
+                provinceId: "771",
+                province: "广西"
+            }, {
+                provinceIndex: 24,
+                provinceId: "898",
+                province: "海南"
+            }, {
+                provinceIndex: 25,
+                provinceId: "220",
+                province: "天津"
+            }, {
+                provinceIndex: 26,
+                provinceId: "351",
+                province: "山西"
+            }, {
+                provinceIndex: 27,
+                provinceId: "951",
+                province: "宁夏"
+            }, {
+                provinceIndex: 28,
+                provinceId: "971",
+                province: "青海"
+            }, {
+                provinceIndex: 29,
+                provinceId: "290",
+                province: "陕西"
+            }, {
+                provinceIndex: 30,
+                provinceId: "851",
+                province: "贵州"
+            }, {
+                provinceIndex: 31,
+                provinceId: "871",
+                province: "云南"
+            }, {
+                provinceIndex: 32,
+                provinceId: "230",
+                province: "重庆"
+            }, {
+                provinceIndex: 77,
+                provinceId: "471",
+                province: "内蒙古"
+            }, {
+                provinceIndex: 78,
+                provinceId: "891",
+                province: "西藏"
+            }];
+            o.provinceMap = d;
+            var y = [{
+                cityName: "邯郸",
+                cityCode: "310",
+                provinceCode: "311"
+            }, {
+                cityName: "石家庄",
+                cityCode: "311",
+                provinceCode: "311"
+            }, {
+                cityName: "保定",
+                cityCode: "312",
+                provinceCode: "311"
+            }, {
+                cityName: "张家口",
+                cityCode: "313",
+                provinceCode: "311"
+            }, {
+                cityName: "雄安",
+                cityCode: "336",
+                provinceCode: "311"
+            }, {
+                cityName: "承德",
+                cityCode: "314",
+                provinceCode: "311"
+            }, {
+                cityName: "唐山",
+                cityCode: "315",
+                provinceCode: "311"
+            }, {
+                cityName: "廊坊",
+                cityCode: "316",
+                provinceCode: "311"
+            }, {
+                cityName: "沧州",
+                cityCode: "317",
+                provinceCode: "311"
+            }, {
+                cityName: "衡水",
+                cityCode: "318",
+                provinceCode: "311"
+            }, {
+                cityName: "邢台",
+                cityCode: "319",
+                provinceCode: "311"
+            }, {
+                cityName: "秦皇岛",
+                cityCode: "335",
+                provinceCode: "311"
+            }, {
+                cityName: "朔州",
+                cityCode: "349",
+                provinceCode: "351"
+            }, {
+                cityName: "忻州",
+                cityCode: "350",
+                provinceCode: "351"
+            }, {
+                cityName: "太原",
+                cityCode: "351",
+                provinceCode: "351"
+            }, {
+                cityName: "大同",
+                cityCode: "352",
+                provinceCode: "351"
+            }, {
+                cityName: "阳泉",
+                cityCode: "353",
+                provinceCode: "351"
+            }, {
+                cityName: "长治",
+                cityCode: "355",
+                provinceCode: "351"
+            }, {
+                cityName: "晋城",
+                cityCode: "356",
+                provinceCode: "351"
+            }, {
+                cityName: "临汾",
+                cityCode: "357",
+                provinceCode: "351"
+            }, {
+                cityName: "吕梁",
+                cityCode: "358",
+                provinceCode: "351"
+            }, {
+                cityName: "运城",
+                cityCode: "359",
+                provinceCode: "351"
+            }, {
+                cityName: "晋中",
+                cityCode: "354",
+                provinceCode: "351"
+            }, {
+                cityName: "商丘",
+                cityCode: "370",
+                provinceCode: "371"
+            }, {
+                cityName: "郑州",
+                cityCode: "371",
+                provinceCode: "371"
+            }, {
+                cityName: "安阳",
+                cityCode: "372",
+                provinceCode: "371"
+            }, {
+                cityName: "新乡",
+                cityCode: "373",
+                provinceCode: "371"
+            }, {
+                cityName: "许昌",
+                cityCode: "374",
+                provinceCode: "371"
+            }, {
+                cityName: "平顶山",
+                cityCode: "375",
+                provinceCode: "371"
+            }, {
+                cityName: "信阳",
+                cityCode: "376",
+                provinceCode: "371"
+            }, {
+                cityName: "南阳",
+                cityCode: "377",
+                provinceCode: "371"
+            }, {
+                cityName: "开封",
+                cityCode: "378",
+                provinceCode: "371"
+            }, {
+                cityName: "洛阳",
+                cityCode: "379",
+                provinceCode: "371"
+            }, {
+                cityName: "济源",
+                cityCode: "397",
+                provinceCode: "371"
+            }, {
+                cityName: "焦作",
+                cityCode: "391",
+                provinceCode: "371"
+            }, {
+                cityName: "鹤壁",
+                cityCode: "392",
+                provinceCode: "371"
+            }, {
+                cityName: "濮阳",
+                cityCode: "393",
+                provinceCode: "371"
+            }, {
+                cityName: "周口",
+                cityCode: "394",
+                provinceCode: "371"
+            }, {
+                cityName: "漯河",
+                cityCode: "395",
+                provinceCode: "371"
+            }, {
+                cityName: "驻马店",
+                cityCode: "396",
+                provinceCode: "371"
+            }, {
+                cityName: "三门峡",
+                cityCode: "398",
+                provinceCode: "371"
+            }, {
+                cityName: "滁州",
+                cityCode: "550",
+                provinceCode: "551"
+            }, {
+                cityName: "合肥",
+                cityCode: "551",
+                provinceCode: "551"
+            }, {
+                cityName: "蚌埠",
+                cityCode: "552",
+                provinceCode: "551"
+            }, {
+                cityName: "芜湖",
+                cityCode: "553",
+                provinceCode: "551"
+            }, {
+                cityName: "淮南",
+                cityCode: "554",
+                provinceCode: "551"
+            }, {
+                cityName: "马鞍山",
+                cityCode: "555",
+                provinceCode: "551"
+            }, {
+                cityName: "安庆",
+                cityCode: "556",
+                provinceCode: "551"
+            }, {
+                cityName: "宿州",
+                cityCode: "557",
+                provinceCode: "551"
+            }, {
+                cityName: "阜阳",
+                cityCode: "558",
+                provinceCode: "551"
+            }, {
+                cityName: "黄山",
+                cityCode: "559",
+                provinceCode: "551"
+            }, {
+                cityName: "淮北",
+                cityCode: "561",
+                provinceCode: "551"
+            }, {
+                cityName: "铜陵",
+                cityCode: "562",
+                provinceCode: "551"
+            }, {
+                cityName: "宣城",
+                cityCode: "563",
+                provinceCode: "551"
+            }, {
+                cityName: "六安",
+                cityCode: "564",
+                provinceCode: "551"
+            }, {
+                cityName: "池州",
+                cityCode: "566",
+                provinceCode: "551"
+            }, {
+                cityName: "亳州",
+                cityCode: "567",
+                provinceCode: "551"
+            }, {
+                cityName: "铁岭",
+                cityCode: "410",
+                provinceCode: "240"
+            }, {
+                cityName: "沈阳",
+                cityCode: "240",
+                provinceCode: "240"
+            }, {
+                cityName: "大连",
+                cityCode: "411",
+                provinceCode: "240"
+            }, {
+                cityName: "鞍山",
+                cityCode: "412",
+                provinceCode: "240"
+            }, {
+                cityName: "抚顺",
+                cityCode: "413",
+                provinceCode: "240"
+            }, {
+                cityName: "本溪",
+                cityCode: "414",
+                provinceCode: "240"
+            }, {
+                cityName: "丹东",
+                cityCode: "415",
+                provinceCode: "240"
+            }, {
+                cityName: "锦州",
+                cityCode: "416",
+                provinceCode: "240"
+            }, {
+                cityName: "营口",
+                cityCode: "417",
+                provinceCode: "240"
+            }, {
+                cityName: "阜新",
+                cityCode: "418",
+                provinceCode: "240"
+            }, {
+                cityName: "辽阳",
+                cityCode: "419",
+                provinceCode: "240"
+            }, {
+                cityName: "朝阳",
+                cityCode: "421",
+                provinceCode: "240"
+            }, {
+                cityName: "盘锦",
+                cityCode: "427",
+                provinceCode: "240"
+            }, {
+                cityName: "葫芦岛",
+                cityCode: "429",
+                provinceCode: "240"
+            }, {
+                cityName: "长春",
+                cityCode: "431",
+                provinceCode: "431"
+            }, {
+                cityName: "吉林",
+                cityCode: "432",
+                provinceCode: "431"
+            }, {
+                cityName: "延吉",
+                cityCode: "433",
+                provinceCode: "431"
+            }, {
+                cityName: "四平",
+                cityCode: "434",
+                provinceCode: "431"
+            }, {
+                cityName: "通化",
+                cityCode: "435",
+                provinceCode: "431"
+            }, {
+                cityName: "白城",
+                cityCode: "436",
+                provinceCode: "431"
+            }, {
+                cityName: "辽源",
+                cityCode: "437",
+                provinceCode: "431"
+            }, {
+                cityName: "松原",
+                cityCode: "438",
+                provinceCode: "431"
+            }, {
+                cityName: "白山",
+                cityCode: "439",
+                provinceCode: "431"
+            }, {
+                cityName: "哈尔滨",
+                cityCode: "451",
+                provinceCode: "451"
+            }, {
+                cityName: "齐齐哈尔",
+                cityCode: "452",
+                provinceCode: "451"
+            }, {
+                cityName: "牡丹江",
+                cityCode: "453",
+                provinceCode: "451"
+            }, {
+                cityName: "佳木斯",
+                cityCode: "454",
+                provinceCode: "451"
+            }, {
+                cityName: "绥化",
+                cityCode: "455",
+                provinceCode: "451"
+            }, {
+                cityName: "黑河",
+                cityCode: "456",
+                provinceCode: "451"
+            }, {
+                cityName: "大兴安岭地",
+                cityCode: "457",
+                provinceCode: "451"
+            }, {
+                cityName: "伊春",
+                cityCode: "458",
+                provinceCode: "451"
+            }, {
+                cityName: "大庆",
+                cityCode: "459",
+                provinceCode: "451"
+            }, {
+                cityName: "七台河",
+                cityCode: "464",
+                provinceCode: "451"
+            }, {
+                cityName: "鸡西",
+                cityCode: "467",
+                provinceCode: "451"
+            }, {
+                cityName: "鹤岗",
+                cityCode: "468",
+                provinceCode: "451"
+            }, {
+                cityName: "双鸭山",
+                cityCode: "469",
+                provinceCode: "451"
+            }, {
+                cityName: "呼和浩特",
+                cityCode: "471",
+                provinceCode: "471"
+            }, {
+                cityName: "包头",
+                cityCode: "472",
+                provinceCode: "471"
+            }, {
+                cityName: "乌海",
+                cityCode: "473",
+                provinceCode: "471"
+            }, {
+                cityName: "通辽",
+                cityCode: "475",
+                provinceCode: "471"
+            }, {
+                cityName: "赤峰",
+                cityCode: "476",
+                provinceCode: "471"
+            }, {
+                cityName: "巴彦淖尔",
+                cityCode: "478",
+                provinceCode: "471"
+            }, {
+                cityName: "兴安盟",
+                cityCode: "482",
+                provinceCode: "471"
+            }, {
+                cityName: "阿拉善盟",
+                cityCode: "483",
+                provinceCode: "471"
+            }, {
+                cityName: "呼伦贝尔",
+                cityCode: "470",
+                provinceCode: "471"
+            }, {
+                cityName: "锡林郭勒盟",
+                cityCode: "479",
+                provinceCode: "471"
+            }, {
+                cityName: "乌兰察布",
+                cityCode: "474",
+                provinceCode: "471"
+            }, {
+                cityName: "鄂尔多斯",
+                cityCode: "477",
+                provinceCode: "471"
+            }, {
+                cityName: "无锡",
+                cityCode: "510",
+                provinceCode: "250"
+            }, {
+                cityName: "南京",
+                cityCode: "250",
+                provinceCode: "250"
+            }, {
+                cityName: "镇江",
+                cityCode: "511",
+                provinceCode: "250"
+            }, {
+                cityName: "苏州",
+                cityCode: "512",
+                provinceCode: "250"
+            }, {
+                cityName: "南通",
+                cityCode: "513",
+                provinceCode: "250"
+            }, {
+                cityName: "扬州",
+                cityCode: "514",
+                provinceCode: "250"
+            }, {
+                cityName: "盐城",
+                cityCode: "515",
+                provinceCode: "250"
+            }, {
+                cityName: "徐州",
+                cityCode: "516",
+                provinceCode: "250"
+            }, {
+                cityName: "淮安",
+                cityCode: "517",
+                provinceCode: "250"
+            }, {
+                cityName: "连云港",
+                cityCode: "518",
+                provinceCode: "250"
+            }, {
+                cityName: "常州",
+                cityCode: "519",
+                provinceCode: "250"
+            }, {
+                cityName: "宿迁",
+                cityCode: "527",
+                provinceCode: "250"
+            }, {
+                cityName: "泰州",
+                cityCode: "523",
+                provinceCode: "250"
+            }, {
+                cityName: "菏泽",
+                cityCode: "530",
+                provinceCode: "531"
+            }, {
+                cityName: "济南",
+                cityCode: "531",
+                provinceCode: "531"
+            }, {
+                cityName: "青岛",
+                cityCode: "532",
+                provinceCode: "531"
+            }, {
+                cityName: "淄博",
+                cityCode: "533",
+                provinceCode: "531"
+            }, {
+                cityName: "德州",
+                cityCode: "534",
+                provinceCode: "531"
+            }, {
+                cityName: "烟台",
+                cityCode: "535",
+                provinceCode: "531"
+            }, {
+                cityName: "潍坊",
+                cityCode: "536",
+                provinceCode: "531"
+            }, {
+                cityName: "济宁",
+                cityCode: "537",
+                provinceCode: "531"
+            }, {
+                cityName: "泰安",
+                cityCode: "538",
+                provinceCode: "531"
+            }, {
+                cityName: "临沂",
+                cityCode: "539",
+                provinceCode: "531"
+            }, {
+                cityName: "滨州",
+                cityCode: "543",
+                provinceCode: "531"
+            }, {
+                cityName: "东营",
+                cityCode: "546",
+                provinceCode: "531"
+            }, {
+                cityName: "威海",
+                cityCode: "631",
+                provinceCode: "531"
+            }, {
+                cityName: "枣庄",
+                cityCode: "632",
+                provinceCode: "531"
+            }, {
+                cityName: "日照",
+                cityCode: "633",
+                provinceCode: "531"
+            }, {
+                cityName: "莱芜",
+                cityCode: "634",
+                provinceCode: "531"
+            }, {
+                cityName: "聊城",
+                cityCode: "635",
+                provinceCode: "531"
+            }, {
+                cityName: "衢州",
+                cityCode: "570",
+                provinceCode: "571"
+            }, {
+                cityName: "杭州",
+                cityCode: "571",
+                provinceCode: "571"
+            }, {
+                cityName: "湖州",
+                cityCode: "572",
+                provinceCode: "571"
+            }, {
+                cityName: "嘉兴",
+                cityCode: "573",
+                provinceCode: "571"
+            }, {
+                cityName: "宁波",
+                cityCode: "574",
+                provinceCode: "571"
+            }, {
+                cityName: "绍兴",
+                cityCode: "575",
+                provinceCode: "571"
+            }, {
+                cityName: "台州",
+                cityCode: "576",
+                provinceCode: "571"
+            }, {
+                cityName: "温州",
+                cityCode: "577",
+                provinceCode: "571"
+            }, {
+                cityName: "丽水",
+                cityCode: "578",
+                provinceCode: "571"
+            }, {
+                cityName: "金华",
+                cityCode: "579",
+                provinceCode: "571"
+            }, {
+                cityName: "舟山",
+                cityCode: "580",
+                provinceCode: "571"
+            }, {
+                cityName: "福州",
+                cityCode: "591",
+                provinceCode: "591"
+            }, {
+                cityName: "厦门",
+                cityCode: "592",
+                provinceCode: "591"
+            }, {
+                cityName: "宁德",
+                cityCode: "593",
+                provinceCode: "591"
+            }, {
+                cityName: "莆田",
+                cityCode: "594",
+                provinceCode: "591"
+            }, {
+                cityName: "泉州",
+                cityCode: "595",
+                provinceCode: "591"
+            }, {
+                cityName: "漳州",
+                cityCode: "596",
+                provinceCode: "591"
+            }, {
+                cityName: "龙岩",
+                cityCode: "597",
+                provinceCode: "591"
+            }, {
+                cityName: "三明",
+                cityCode: "598",
+                provinceCode: "591"
+            }, {
+                cityName: "南平",
+                cityCode: "599",
+                provinceCode: "591"
+            }, {
+                cityName: "襄阳",
+                cityCode: "710",
+                provinceCode: "270"
+            }, {
+                cityName: "武汉",
+                cityCode: "270",
+                provinceCode: "270"
+            }, {
+                cityName: "鄂州",
+                cityCode: "711",
+                provinceCode: "270"
+            }, {
+                cityName: "孝感",
+                cityCode: "712",
+                provinceCode: "270"
+            }, {
+                cityName: "黄冈",
+                cityCode: "713",
+                provinceCode: "270"
+            }, {
+                cityName: "黄石",
+                cityCode: "714",
+                provinceCode: "270"
+            }, {
+                cityName: "咸宁",
+                cityCode: "715",
+                provinceCode: "270"
+            }, {
+                cityName: "荆州",
+                cityCode: "716",
+                provinceCode: "270"
+            }, {
+                cityName: "宜昌",
+                cityCode: "717",
+                provinceCode: "270"
+            }, {
+                cityName: "恩施州",
+                cityCode: "718",
+                provinceCode: "270"
+            }, {
+                cityName: "十堰",
+                cityCode: "719",
+                provinceCode: "270"
+            }, {
+                cityName: "潜江",
+                cityCode: "72801",
+                provinceCode: "270"
+            }, {
+                cityName: "三亚",
+                cityCode: "721",
+                provinceCode: "898"
+            }, {
+                cityName: "随州",
+                cityCode: "722",
+                provinceCode: "270"
+            }, {
+                cityName: "荆门",
+                cityCode: "724",
+                provinceCode: "270"
+            }, {
+                cityName: "天门",
+                cityCode: "72802",
+                provinceCode: "270"
+            }, {
+                cityName: "岳阳",
+                cityCode: "730",
+                provinceCode: "731"
+            }, {
+                cityName: "长沙",
+                cityCode: "731",
+                provinceCode: "731"
+            }, {
+                cityName: "湘潭",
+                cityCode: "732",
+                provinceCode: "731"
+            }, {
+                cityName: "株洲",
+                cityCode: "733",
+                provinceCode: "731"
+            }, {
+                cityName: "衡阳",
+                cityCode: "734",
+                provinceCode: "731"
+            }, {
+                cityName: "郴州",
+                cityCode: "735",
+                provinceCode: "731"
+            }, {
+                cityName: "常德",
+                cityCode: "736",
+                provinceCode: "731"
+            }, {
+                cityName: "益阳",
+                cityCode: "737",
+                provinceCode: "731"
+            }, {
+                cityName: "娄底",
+                cityCode: "738",
+                provinceCode: "731"
+            }, {
+                cityName: "邵阳",
+                cityCode: "739",
+                provinceCode: "731"
+            }, {
+                cityName: "湘西州",
+                cityCode: "743",
+                provinceCode: "731"
+            }, {
+                cityName: "张家界",
+                cityCode: "744",
+                provinceCode: "731"
+            }, {
+                cityName: "怀化",
+                cityCode: "745",
+                provinceCode: "731"
+            }, {
+                cityName: "永州",
+                cityCode: "746",
+                provinceCode: "731"
+            }, {
+                cityName: "江门",
+                cityCode: "750",
+                provinceCode: "200"
+            }, {
+                cityName: "广州",
+                cityCode: "200",
+                provinceCode: "200"
+            }, {
+                cityName: "韶关",
+                cityCode: "751",
+                provinceCode: "200"
+            }, {
+                cityName: "惠州",
+                cityCode: "752",
+                provinceCode: "200"
+            }, {
+                cityName: "梅州",
+                cityCode: "753",
+                provinceCode: "200"
+            }, {
+                cityName: "汕头",
+                cityCode: "754",
+                provinceCode: "200"
+            }, {
+                cityName: "深圳",
+                cityCode: "755",
+                provinceCode: "200"
+            }, {
+                cityName: "珠海",
+                cityCode: "756",
+                provinceCode: "200"
+            }, {
+                cityName: "佛山",
+                cityCode: "757",
+                provinceCode: "200"
+            }, {
+                cityName: "肇庆",
+                cityCode: "758",
+                provinceCode: "200"
+            }, {
+                cityName: "湛江",
+                cityCode: "759",
+                provinceCode: "200"
+            }, {
+                cityName: "中山",
+                cityCode: "760",
+                provinceCode: "200"
+            }, {
+                cityName: "河源",
+                cityCode: "762",
+                provinceCode: "200"
+            }, {
+                cityName: "清远",
+                cityCode: "763",
+                provinceCode: "200"
+            }, {
+                cityName: "云浮",
+                cityCode: "766",
+                provinceCode: "200"
+            }, {
+                cityName: "潮州",
+                cityCode: "768",
+                provinceCode: "200"
+            }, {
+                cityName: "东莞",
+                cityCode: "769",
+                provinceCode: "200"
+            }, {
+                cityName: "汕尾",
+                cityCode: "660",
+                provinceCode: "200"
+            }, {
+                cityName: "阳江",
+                cityCode: "662",
+                provinceCode: "200"
+            }, {
+                cityName: "揭阳",
+                cityCode: "663",
+                provinceCode: "200"
+            }, {
+                cityName: "茂名",
+                cityCode: "668",
+                provinceCode: "200"
+            }, {
+                cityName: "防城港",
+                cityCode: "770",
+                provinceCode: "771"
+            }, {
+                cityName: "南宁",
+                cityCode: "771",
+                provinceCode: "771"
+            }, {
+                cityName: "柳州",
+                cityCode: "772",
+                provinceCode: "771"
+            }, {
+                cityName: "桂林",
+                cityCode: "773",
+                provinceCode: "771"
+            }, {
+                cityName: "梧州",
+                cityCode: "774",
+                provinceCode: "771"
+            }, {
+                cityName: "玉林",
+                cityCode: "775",
+                provinceCode: "771"
+            }, {
+                cityName: "百色",
+                cityCode: "776",
+                provinceCode: "771"
+            }, {
+                cityName: "钦州",
+                cityCode: "777",
+                provinceCode: "771"
+            }, {
+                cityName: "河池",
+                cityCode: "778",
+                provinceCode: "771"
+            }, {
+                cityName: "北海",
+                cityCode: "779",
+                provinceCode: "771"
+            }, {
+                cityName: "贺州",
+                cityCode: "783",
+                provinceCode: "771"
+            }, {
+                cityName: "来宾",
+                cityCode: "781",
+                provinceCode: "771"
+            }, {
+                cityName: "贵港",
+                cityCode: "782",
+                provinceCode: "771"
+            }, {
+                cityName: "崇左",
+                cityCode: "780",
+                provinceCode: "771"
+            }, {
+                cityName: "新余",
+                cityCode: "790",
+                provinceCode: "791"
+            }, {
+                cityName: "鹰潭",
+                cityCode: "701",
+                provinceCode: "791"
+            }, {
+                cityName: "南昌",
+                cityCode: "791",
+                provinceCode: "791"
+            }, {
+                cityName: "九江",
+                cityCode: "792",
+                provinceCode: "791"
+            }, {
+                cityName: "上饶",
+                cityCode: "793",
+                provinceCode: "791"
+            }, {
+                cityName: "抚州",
+                cityCode: "794",
+                provinceCode: "791"
+            }, {
+                cityName: "宜春",
+                cityCode: "795",
+                provinceCode: "791"
+            }, {
+                cityName: "吉安",
+                cityCode: "796",
+                provinceCode: "791"
+            }, {
+                cityName: "赣州",
+                cityCode: "797",
+                provinceCode: "791"
+            }, {
+                cityName: "景德镇",
+                cityCode: "798",
+                provinceCode: "791"
+            }, {
+                cityName: "萍乡",
+                cityCode: "799",
+                provinceCode: "791"
+            }, {
+                cityName: "成都",
+                cityCode: "280",
+                provinceCode: "280"
+            }, {
+                cityName: "攀枝花",
+                cityCode: "812",
+                provinceCode: "280"
+            }, {
+                cityName: "自贡",
+                cityCode: "813",
+                provinceCode: "280"
+            }, {
+                cityName: "绵阳",
+                cityCode: "816",
+                provinceCode: "280"
+            }, {
+                cityName: "南充",
+                cityCode: "817",
+                provinceCode: "280"
+            }, {
+                cityName: "达州",
+                cityCode: "818",
+                provinceCode: "280"
+            }, {
+                cityName: "遂宁",
+                cityCode: "825",
+                provinceCode: "280"
+            }, {
+                cityName: "广安",
+                cityCode: "826",
+                provinceCode: "280"
+            }, {
+                cityName: "巴中",
+                cityCode: "827",
+                provinceCode: "280"
+            }, {
+                cityName: "泸州",
+                cityCode: "830",
+                provinceCode: "280"
+            }, {
+                cityName: "宜宾",
+                cityCode: "831",
+                provinceCode: "280"
+            }, {
+                cityName: "内江",
+                cityCode: "832",
+                provinceCode: "280"
+            }, {
+                cityName: "乐山",
+                cityCode: "833",
+                provinceCode: "280"
+            }, {
+                cityName: "凉山",
+                cityCode: "834",
+                provinceCode: "280"
+            }, {
+                cityName: "雅安",
+                cityCode: "835",
+                provinceCode: "280"
+            }, {
+                cityName: "甘孜",
+                cityCode: "836",
+                provinceCode: "280"
+            }, {
+                cityName: "阿坝",
+                cityCode: "837",
+                provinceCode: "280"
+            }, {
+                cityName: "德阳",
+                cityCode: "838",
+                provinceCode: "280"
+            }, {
+                cityName: "广元",
+                cityCode: "839",
+                provinceCode: "280"
+            }, {
+                cityName: "资阳",
+                cityCode: "840",
+                provinceCode: "280"
+            }, {
+                cityName: "眉山",
+                cityCode: "841",
+                provinceCode: "280"
+            }, {
+                cityName: "天府新区",
+                cityCode: "035",
+                provinceCode: "280"
+            }, {
+                cityName: "贵阳",
+                cityCode: "851",
+                provinceCode: "851"
+            }, {
+                cityName: "遵义",
+                cityCode: "852",
+                provinceCode: "851"
+            }, {
+                cityName: "安顺",
+                cityCode: "853",
+                provinceCode: "851"
+            }, {
+                cityName: "都匀",
+                cityCode: "854",
+                provinceCode: "851"
+            }, {
+                cityName: "凯里",
+                cityCode: "855",
+                provinceCode: "851"
+            }, {
+                cityName: "铜仁",
+                cityCode: "856",
+                provinceCode: "851"
+            }, {
+                cityName: "毕节",
+                cityCode: "857",
+                provinceCode: "851"
+            }, {
+                cityName: "六盘水",
+                cityCode: "858",
+                provinceCode: "851"
+            }, {
+                cityName: "兴义",
+                cityCode: "859",
+                provinceCode: "851"
+            }, {
+                cityName: "昭通",
+                cityCode: "870",
+                provinceCode: "871"
+            }, {
+                cityName: "昆明",
+                cityCode: "871",
+                provinceCode: "871"
+            }, {
+                cityName: "大理",
+                cityCode: "872",
+                provinceCode: "871"
+            }, {
+                cityName: "普洱",
+                cityCode: "879",
+                provinceCode: "871"
+            }, {
+                cityName: "曲靖",
+                cityCode: "874",
+                provinceCode: "871"
+            }, {
+                cityName: "保山",
+                cityCode: "875",
+                provinceCode: "871"
+            }, {
+                cityName: "文山",
+                cityCode: "876",
+                provinceCode: "871"
+            }, {
+                cityName: "玉溪",
+                cityCode: "877",
+                provinceCode: "871"
+            }, {
+                cityName: "楚雄",
+                cityCode: "878",
+                provinceCode: "871"
+            }, {
+                cityName: "怒江",
+                cityCode: "886",
+                provinceCode: "871"
+            }, {
+                cityName: "临沧",
+                cityCode: "883",
+                provinceCode: "871"
+            }, {
+                cityName: "德宏",
+                cityCode: "692",
+                provinceCode: "871"
+            }, {
+                cityName: "迪庆",
+                cityCode: "887",
+                provinceCode: "871"
+            }, {
+                cityName: "丽江",
+                cityCode: "888",
+                provinceCode: "871"
+            }, {
+                cityName: "西双版纳",
+                cityCode: "691",
+                provinceCode: "871"
+            }, {
+                cityName: "红河州",
+                cityCode: "873",
+                provinceCode: "871"
+            }, {
+                cityName: "拉萨",
+                cityCode: "891",
+                provinceCode: "891"
+            }, {
+                cityName: "日喀则",
+                cityCode: "892",
+                provinceCode: "891"
+            }, {
+                cityName: "山南",
+                cityCode: "893",
+                provinceCode: "891"
+            }, {
+                cityName: "林芝",
+                cityCode: "894",
+                provinceCode: "891"
+            }, {
+                cityName: "昌都",
+                cityCode: "895",
+                provinceCode: "891"
+            }, {
+                cityName: "那曲",
+                cityCode: "896",
+                provinceCode: "891"
+            }, {
+                cityName: "阿里",
+                cityCode: "897",
+                provinceCode: "891"
+            }, {
+                cityName: "延安",
+                cityCode: "911",
+                provinceCode: "290"
+            }, {
+                cityName: "西安",
+                cityCode: "290",
+                provinceCode: "290"
+            }, {
+                cityName: "榆林",
+                cityCode: "912",
+                provinceCode: "290"
+            }, {
+                cityName: "渭南",
+                cityCode: "913",
+                provinceCode: "290"
+            }, {
+                cityName: "商洛",
+                cityCode: "914",
+                provinceCode: "290"
+            }, {
+                cityName: "安康",
+                cityCode: "915",
+                provinceCode: "290"
+            }, {
+                cityName: "汉中",
+                cityCode: "916",
+                provinceCode: "290"
+            }, {
+                cityName: "宝鸡",
+                cityCode: "917",
+                provinceCode: "290"
+            }, {
+                cityName: "铜川",
+                cityCode: "919",
+                provinceCode: "290"
+            }, {
+                cityName: "咸阳",
+                cityCode: "910",
+                provinceCode: "290"
+            }, {
+                cityName: "临夏",
+                cityCode: "930",
+                provinceCode: "931"
+            }, {
+                cityName: "兰州",
+                cityCode: "931",
+                provinceCode: "931"
+            }, {
+                cityName: "定西",
+                cityCode: "932",
+                provinceCode: "931"
+            }, {
+                cityName: "平凉",
+                cityCode: "933",
+                provinceCode: "931"
+            }, {
+                cityName: "庆阳",
+                cityCode: "934",
+                provinceCode: "931"
+            }, {
+                cityName: "武威",
+                cityCode: "935",
+                provinceCode: "931"
+            }, {
+                cityName: "张掖",
+                cityCode: "936",
+                provinceCode: "931"
+            }, {
+                cityName: "酒泉",
+                cityCode: "937",
+                provinceCode: "931"
+            }, {
+                cityName: "天水",
+                cityCode: "938",
+                provinceCode: "931"
+            }, {
+                cityName: "陇南",
+                cityCode: "939",
+                provinceCode: "931"
+            }, {
+                cityName: "甘南",
+                cityCode: "941",
+                provinceCode: "931"
+            }, {
+                cityName: "白银",
+                cityCode: "943",
+                provinceCode: "931"
+            }, {
+                cityName: "金昌",
+                cityCode: "945",
+                provinceCode: "931"
+            }, {
+                cityName: "嘉峪关",
+                cityCode: "947",
+                provinceCode: "931"
+            }, {
+                cityName: "银川",
+                cityCode: "951",
+                provinceCode: "951"
+            }, {
+                cityName: "石嘴山",
+                cityCode: "952",
+                provinceCode: "951"
+            }, {
+                cityName: "吴忠",
+                cityCode: "953",
+                provinceCode: "951"
+            }, {
+                cityName: "固原",
+                cityCode: "954",
+                provinceCode: "951"
+            }, {
+                cityName: "中卫",
+                cityCode: "955",
+                provinceCode: "951"
+            }, {
+                cityName: "海口",
+                cityCode: "898",
+                provinceCode: "898"
+            }, {
+                cityName: "海北",
+                cityCode: "970",
+                provinceCode: "971"
+            }, {
+                cityName: "西宁",
+                cityCode: "971",
+                provinceCode: "971"
+            }, {
+                cityName: "海东",
+                cityCode: "972",
+                provinceCode: "971"
+            }, {
+                cityName: "黄南",
+                cityCode: "973",
+                provinceCode: "971"
+            }, {
+                cityName: "海南",
+                cityCode: "974",
+                provinceCode: "971"
+            }, {
+                cityName: "果洛",
+                cityCode: "975",
+                provinceCode: "971"
+            }, {
+                cityName: "玉树",
+                cityCode: "976",
+                provinceCode: "971"
+            }, {
+                cityName: "海西",
+                cityCode: "977",
+                provinceCode: "971"
+            }, {
+                cityName: "格尔木",
+                cityCode: "979",
+                provinceCode: "971"
+            }, {
+                cityName: "临高",
+                cityCode: "980",
+                provinceCode: "898"
+            }, {
+                cityName: "白沙",
+                cityCode: "981",
+                provinceCode: "898"
+            }, {
+                cityName: "昌江",
+                cityCode: "982",
+                provinceCode: "898"
+            }, {
+                cityName: "乐东",
+                cityCode: "983",
+                provinceCode: "898"
+            }, {
+                cityName: "陵水",
+                cityCode: "984",
+                provinceCode: "898"
+            }, {
+                cityName: "保亭",
+                cityCode: "985",
+                provinceCode: "898"
+            }, {
+                cityName: "琼中",
+                cityCode: "986",
+                provinceCode: "898"
+            }, {
+                cityName: "洋浦",
+                cityCode: "987",
+                provinceCode: "898"
+            }, {
+                cityName: "儋州",
+                cityCode: "890",
+                provinceCode: "898"
+            }, {
+                cityName: "定安",
+                cityCode: "962",
+                provinceCode: "898"
+            }, {
+                cityName: "东方",
+                cityCode: "963",
+                provinceCode: "898"
+            }, {
+                cityName: "琼海",
+                cityCode: "964",
+                provinceCode: "898"
+            }, {
+                cityName: "屯昌",
+                cityCode: "965",
+                provinceCode: "898"
+            }, {
+                cityName: "万宁",
+                cityCode: "966",
+                provinceCode: "898"
+            }, {
+                cityName: "文昌",
+                cityCode: "967",
+                provinceCode: "898"
+            }, {
+                cityName: "五指山",
+                cityCode: "968",
+                provinceCode: "898"
+            }, {
+                cityName: "澄迈",
+                cityCode: "960",
+                provinceCode: "898"
+            }, {
+                cityName: "塔城",
+                cityCode: "901",
+                provinceCode: "991"
+            }, {
+                cityName: "哈密",
+                cityCode: "902",
+                provinceCode: "991"
+            }, {
+                cityName: "和田",
+                cityCode: "903",
+                provinceCode: "991"
+            }, {
+                cityName: "阿勒泰",
+                cityCode: "906",
+                provinceCode: "991"
+            }, {
+                cityName: "博尔塔拉",
+                cityCode: "909",
+                provinceCode: "991"
+            }, {
+                cityName: "克拉玛依",
+                cityCode: "990",
+                provinceCode: "991"
+            }, {
+                cityName: "乌鲁木齐",
+                cityCode: "991",
+                provinceCode: "991"
+            }, {
+                cityName: "奎屯",
+                cityCode: "992",
+                provinceCode: "991"
+            }, {
+                cityName: "石河子",
+                cityCode: "993",
+                provinceCode: "991"
+            }, {
+                cityName: "昌吉",
+                cityCode: "994",
+                provinceCode: "991"
+            }, {
+                cityName: "吐鲁番",
+                cityCode: "995",
+                provinceCode: "991"
+            }, {
+                cityName: "巴音郭楞",
+                cityCode: "996",
+                provinceCode: "991"
+            }, {
+                cityName: "阿克苏",
+                cityCode: "997",
+                provinceCode: "991"
+            }, {
+                cityName: "喀什",
+                cityCode: "998",
+                provinceCode: "991"
+            }, {
+                cityName: "伊犁",
+                cityCode: "999",
+                provinceCode: "991"
+            }, {
+                cityName: "克孜勒苏柯尔克孜",
+                cityCode: "908",
+                provinceCode: "991"
+            }, {
+                cityName: "江汉",
+                cityCode: "728",
+                provinceCode: "270"
+            }, {
+                cityName: "上海",
+                cityCode: "210",
+                provinceCode: "210"
+            }, {
+                cityName: "北京",
+                cityCode: "100",
+                provinceCode: "100"
+            }, {
+                cityName: "天津",
+                cityCode: "220",
+                provinceCode: "220"
+            }, {
+                cityName: "重庆",
+                cityCode: "230",
+                provinceCode: "230"
+            }];
+            o.cityList = y;
+            var C = function(e) {
+                var o = d.find((function(o, t) {
+                    if (o.provinceIndex == e || o.provinceId == e)
+                        return !0
+                }
+                ));
+                return o ? o.province : ""
+            };
+            o.getProvince = C;
+            var p = function(e) {
+                var o = d.find((function(o, t) {
+                    if (e.indexOf(o.province) > -1)
+                        return !0
+                }
+                ));
+                return o ? o.provinceId : ""
+            };
+            o.getProvinceCode = p;
+            var v = function(e) {
+                var o = y.find((function(o) {
+                    if (o.cityCode == e)
+                        return !0
+                }
+                ));
+                return o ? o.cityName : ""
+            };
+            o.getCityNameByCode = v;
+            var u = function(e) {
+                var o = y.find((function(o) {
+                    if (o.cityCode == e)
+                        return !0
+                }
+                ));
+                return o ? o.provinceCode : ""
+            };
+            o.getProvinceByCode = u;
+            var m = function(e) {
+                var o = y.find((function(o) {
+                    if (e.indexOf(o.cityName) > -1)
+                        return !0
+                }
+                ));
+                return o ? o.cityCode : ""
+            };
+            o.findCityCodeByCityName = m;
+            var N = function(e) {
+                var o = "移动";
+                return "chinaUnicom" === e ? o = "联通" : "chinaTelecom" === e && (o = "电信"),
+                o
+            };
+            o.getPhoneSource = N;
+            var s = function(e) {
+                var o = n.default.getters.userInfo.provinceCode
+                  , t = void 0 === o ? "" : o
+                  , i = "";
+                return i = e && e.provinceCode ? e.provinceCode : t,
+                new Promise((function(e) {
+                    if (i) {
+                        var o = {
+                            shopType: "shop003",
+                            shopProvince: i,
+                            queryType: "1"
+                        };
+                        a.getShopPageIdByProvince(o).then((function(o) {
+                            "0" == o.returnCode && o.data && o.data.pageId && e(o.data.pageId),
+                            e("")
+                        }
+                        ))
+                    } else
+                        e("")
+                }
+                ))
+            };
+            o.getShopPageIdByProvince = s;
+            var f = function() {
+                var e = (0,
+                r.default)(regeneratorRuntime.mark((function e(o) {
+                    var t, i, c, r;
+                    return regeneratorRuntime.wrap((function(e) {
+                        while (1)
+                            switch (e.prev = e.next) {
+                            case 0:
+                                for (c in t = [],
+                                i = [],
+                                o)
+                                    i.push({
+                                        customerId: o[c].labelIds,
+                                        customerType: o[c].customerType
+                                    });
+                                if (e.prev = 3,
+                                0 != i.length) {
+                                    e.next = 6;
+                                    break
+                                }
+                                return e.abrupt("return", t);
+                            case 6:
+                                return e.next = 8,
+                                a.customerCheck({
+                                    customerInfos: i
+                                });
+                            case 8:
+                                r = e.sent,
+                                "0" == r.returnCode && r.data && r.data.length > 0 && (t = r.data),
+                                e.next = 15;
+                                break;
+                            case 12:
+                                e.prev = 12,
+                                e.t0 = e["catch"](3),
+                                e.t0;
+                            case 15:
+                                return e.abrupt("return", t);
+                            case 17:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[3, 12]])
+                }
+                )));
+                return function(o) {
+                    return e.apply(this, arguments)
+                }
+            }();
+            o.getcustomerCheckData = f;
+            var l = function(e, o) {
+                var t = {};
+                return y.find((function(i) {
+                    if (e === i.provinceCode)
+                        if (o) {
+                            if (o == i.cityCode)
+                                return t.cityCode = i.cityCode,
+                                t.cityName = i.cityName,
+                                !0
+                        } else if (e == i.cityCode)
+                            return t.cityCode = i.cityCode,
+                            t.cityName = i.cityName,
+                            !0
+                }
+                )),
+                t
+            };
+            o.findCityByProvince = l;
+            var g = function(e) {
+                var o = y.find((function(o) {
+                    if (o.cityCode === e)
+                        return !0
+                }
+                ));
+                return o
+            };
+            o.findCityArrByCode = g
+        }
+        ).call(this, t("5a52")["default"])
+    }
+}]);
