@@ -40,10 +40,10 @@ package-lock.json
 yarn.lock
 
 # 敏感信息 - 用户凭证和 Token
-user1/cooike_user1.json
-user1/token_user1.txt
-user2/cooike_user2.json
-user2/token_user2.txt
+# user1/cooike_user1.json
+# user1/token_user1.txt
+# user2/cooike_user2.json
+# user2/token_user2.txt
 *.json
 !package.json
 !package-lock.json
