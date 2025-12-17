@@ -179,11 +179,11 @@ def create_order(authorization, cookies_dict, verify_code, norm_id=2259177,
 def main():
     """主函数"""
     print("=" * 80)
-    print("User2 创建订单 - 使用验证码 627398")
     print("=" * 80)
     
     # 验证码
-    VERIFY_CODE = "627398"
+    VERIFY_CODE = "326337"
+    print(f"User2 创建订单 - 使用验证码 {VERIFY_CODE}")
     
     # 读取 user2 的 cookie
     cookie_file = 'user2/cooike_user2.json'
