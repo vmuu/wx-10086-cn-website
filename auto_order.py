@@ -7,7 +7,8 @@
 import json
 import sys
 import time
-from user_send_sms_complete import call_api_with_curl, get_auth_token
+from api_utils import call_api_with_curl
+from user_send_sms_complete import get_auth_token
 from createOrder_params import generate_createOrder_params
 from sendSms_params_final import aes_encrypt
 
@@ -356,9 +357,9 @@ def main():
     
     # 配置
     config = {
-        "user": "user1",
-        "cookie_file": "user1/cooike_user1.json",
-        "token_file": "user1/token_user1.txt"
+        "user": "user2",
+        "cookie_file": "user2/cooike_user2.json",
+        "token_file": "user2/token_user2.txt"
     }
     
     # 产品配置（示例）
@@ -490,4 +491,3 @@ if __name__ == "__main__":
         print(f"\n[ERROR] 发生错误: {e}")
         import traceback
         traceback.print_exc()
-

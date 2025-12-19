@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 简单的 normIds 获取脚本
-复用 user2_send_sms_complete 的成功方法
+复用通用工具获取接口结果
 """
 import json
-from user2_send_sms_complete import call_api_with_curl, get_auth_token
+from api_utils import call_api_with_curl
+from user_send_sms_complete import get_auth_token
 from sendSms_params_final import aes_encrypt
 
 def load_cookies_from_file(cookie_file):

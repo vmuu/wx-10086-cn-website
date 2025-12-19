@@ -5,78 +5,10 @@ User 完整的验证码发送流程
 包含：1. 获取授权token  2. 发送验证码
 """
 import json
-import subprocess
 import sys
 import os
-from sendSms_params_final import aes_encrypt, aes_decrypt
-
-
-def call_api_with_curl(url, encrypted_body, headers, cookies_dict):
-    """
-    使用 curl 调用 API（解决 OpenSSL 3.0 SSL 握手问题）
-    
-    Args:
-        url: API URL
-        encrypted_body: 加密的请求体
-        headers: 请求头字典
-        cookies_dict: Cookie字典
-        
-    Returns:
-        解密后的响应JSON
-    """
-    # 构建 cookie 字符串
-    cookie_str = "; ".join([f"{k}={v}" for k, v in cookies_dict.items()])
-    
-    # 构建 curl 命令
-    curl_cmd = ["curl", "-X", "POST", url]
-    
-    # 添加请求头
-    for key, value in headers.items():
-        curl_cmd.extend(["-H", f"{key}: {value}"])
-    
-    # 添加 cookie
-    curl_cmd.extend(["-H", f"cookie: {cookie_str}"])
-    
-    # 添加请求体
-    curl_cmd.extend(["-d", encrypted_body])
-    
-    # 忽略SSL证书验证
-    curl_cmd.extend(["-k", "--compressed"])
-    
-    try:
-        # 执行 curl 命令
-        result = subprocess.run(
-            curl_cmd,
-            capture_output=True,
-            text=True,
-            timeout=10,
-            encoding='utf-8'
-        )
-        
-        if result.returncode != 0:
-            return {
-                "error": f"Curl failed: {result.stderr}",
-                "error_type": "CurlError",
-                "returncode": result.returncode
-            }
-        
-        # 解析响应
-        response_json = json.loads(result.stdout)
-        encrypted_response = response_json.get("body", "")
-        
-        if encrypted_response:
-            # 解密响应
-            decrypted_response = aes_decrypt(encrypted_response)
-            return json.loads(decrypted_response)
-        else:
-            return response_json
-    
-    except subprocess.TimeoutExpired:
-        return {"error": "Request timeout", "error_type": "TimeoutError"}
-    except json.JSONDecodeError as e:
-        return {"error": f"JSON decode error: {str(e)}", "error_type": "JSONDecodeError", "raw_output": result.stdout[:500]}
-    except Exception as e:
-        return {"error": str(e), "error_type": type(e).__name__}
+from sendSms_params_final import aes_encrypt
+from api_utils import call_api_with_curl
 
 
 def get_auth_token(cookies_dict, back_url="/website/businessPlatform/shopDetail"):
