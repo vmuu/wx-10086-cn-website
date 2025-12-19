@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-User2 完整的验证码发送流程
+User 完整的验证码发送流程
 包含：1. 获取授权token  2. 发送验证码
 """
 import json
@@ -152,7 +152,7 @@ def get_auth_token(cookies_dict, back_url="/website/businessPlatform/shopDetail"
         return None, None
 
 
-def send_sms(authorization, cookies_dict, busi_id="2", norm_ids="2259177", user_effect_type="Type_Default"):
+def send_sms(authorization, cookies_dict, busi_id="2", norm_ids="2259111", user_effect_type="Type_Default"):
     """
     发送验证码
     
@@ -223,11 +223,11 @@ def send_sms(authorization, cookies_dict, busi_id="2", norm_ids="2259177", user_
 def main():
     """主函数"""
     print("=" * 80)
-    print("User2 发送验证码完整流程")
+    print("User 发送验证码完整流程")
     print("=" * 80)
     
-    # 读取 user2 的 cookie
-    cookie_file = 'user2/cooike_user2.json'
+    # 读取 user 的 cookie
+    cookie_file = 'user1/cooike_user1.json'
     if not os.path.exists(cookie_file):
         print(f"[ERROR] Cookie 文件不存在: {cookie_file}")
         sys.exit(1)
@@ -254,7 +254,7 @@ def main():
         sys.exit(1)
     
     # 保存 token 到文件
-    token_file = 'user2/token_user2.txt'
+    token_file = 'user1/token_user1.txt'
     with open(token_file, 'w', encoding='utf-8') as f:
         f.write(token)
     print(f"Token 已保存到: {token_file}")
