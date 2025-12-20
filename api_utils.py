@@ -24,6 +24,9 @@ def call_api_with_curl(url: str, encrypted_body: str, headers: Dict[str, str], c
     Returns:
         解密后的响应 JSON 或错误信息字典
     """
+    def _short(text: str, limit: int = 400) -> str:
+        return text if len(text) <= limit else text[:limit] + "...(truncated)"
+
     cookie_str = "; ".join([f"{k}={v}" for k, v in cookies_dict.items()])
     curl_cmd = ["curl", "-X", "POST", url]
 
@@ -35,6 +38,14 @@ def call_api_with_curl(url: str, encrypted_body: str, headers: Dict[str, str], c
     curl_cmd.extend(["-k", "--compressed"])
 
     try:
+        print("\n" + "=" * 80)
+        print("[REQUEST] URL:", url)
+        print("[REQUEST] Headers:")
+        for k, v in headers.items():
+            print(f"  {k}: {v}")
+        print("[REQUEST] Cookie:", _short(cookie_str, 300))
+        print("[REQUEST] Body (hex) len:", len(encrypted_body))
+
         result = subprocess.run(
             curl_cmd,
             capture_output=True,
@@ -45,16 +56,20 @@ def call_api_with_curl(url: str, encrypted_body: str, headers: Dict[str, str], c
 
         if result.returncode != 0:
             return {
-                "error": f"Curl failed: {result.stderr}",
-                "error_type": "CurlError",
-                "returncode": result.returncode
-            }
+            "error": f"Curl failed: {result.stderr}",
+            "error_type": "CurlError",
+            "returncode": result.returncode
+        }
+
+        print("[RESPONSE] status:", result.returncode)
+        print("[RESPONSE] raw:", _short(result.stdout, 500))
 
         response_json = json.loads(result.stdout)
         encrypted_response = response_json.get("body", "")
 
         if encrypted_response:
             decrypted_response = aes_decrypt(encrypted_response)
+            print("[RESPONSE] decrypted:", _short(decrypted_response, 500))
             return json.loads(decrypted_response)
         return response_json
 

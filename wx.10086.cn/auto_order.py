@@ -78,10 +78,6 @@ def get_auth_token_with_debug(cookies_dict, back_url="/website/businessPlatform/
         "x-requested-with": "XMLHttpRequest"
     }
     
-    print(f"\n[请求] 请求头:")
-    for key, value in headers.items():
-        print(f"  {key}: {value}")
-    
     # 调用API
     print("\n正在发送请求...")
     response = call_api_with_curl(url, encrypted_body, headers, cookies_dict)
@@ -147,7 +143,7 @@ def send_sms(authorization, cookies_dict, busi_id="2", norm_ids="2258951,2258995
     print(f"[INFO] 发送参数: {json_str}")
     print(f"[INFO] 加密后的请求体 (前50字符): {encrypted_body[:50]}...")
     
-    # 请求头（使用与 user2_send_sms_complete.py 相同的完整请求头）
+    # 请求头（使用与 user1_send_sms_complete.py 相同的完整请求头）
     headers = {
         "accept": "application/json, text/plain, */*",
         "accept-encoding": "gzip, deflate, br, zstd",
@@ -300,10 +296,6 @@ def create_order(authorization, cookies_dict, verify_code, product_id, product_c
         "x-requested-with": "XMLHttpRequest"
     }
     
-    print(f"\n[请求] 请求头:")
-    for key, value in headers.items():
-        print(f"  {key}: {value}")
-    
     # 调用 API
     print("\n正在发送请求...")
     response = call_api_with_curl(url, encrypted_body, headers, cookies_dict)
@@ -357,9 +349,9 @@ def main():
     
     # 配置
     config = {
-        "user": "user2",
-        "cookie_file": "user2/cooike_user2.json",
-        "token_file": "user2/token_user2.txt"
+        "user": "user1",
+        "cookie_file": "user1/cooike_user1.json",
+        "token_file": "user1/token_user1.txt"
     }
     
     # 产品配置（示例）
